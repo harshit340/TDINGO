@@ -60,7 +60,7 @@ export const programsData: Record<string, Program> = {
     batches: 6,
     description:
       "Building on the fundamentals, Smash 102 introduces intermediate techniques and strategies. You'll master advanced footwork patterns, learn powerful smash techniques, improve your net play, and develop tactical awareness. This program focuses on consistency, accuracy, and building the stamina needed for competitive play. Perfect for players who have completed Smash 101 or have basic badminton experience.",
-    heroImage: "/image/images/smash101.png", // <- Fix the image path here
+    heroImage: "/image/smash101.png", 
     discussions: [
       {
         id: 1,
