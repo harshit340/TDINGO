@@ -85,7 +85,7 @@ function BatchesTab({ programId }: { programId: string }) {
   };
 } */
 
-export default function Page({ params }: { params: { id: string } }) {
+export default function Page({ params }: any) {
   const [activeTab, setActiveTab] = useState("Overview")
   const programData = programsData[params.id as keyof typeof programsData]
 
