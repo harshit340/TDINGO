@@ -1,4 +1,25 @@
-export const programsData = {
+// Define an interface for a program
+interface Program {
+  title: string;
+  level: string;
+  batches: number;
+  description: string;
+  heroImage: string;
+  discussions: Discussion[];
+}
+
+// Define an interface for a discussion within a program
+interface Discussion {
+  id: number;
+  user: string;
+  role: string;
+  time: string;
+  message: string;
+  avatar: string;
+}
+
+// Define the programsData object using the defined interfaces
+export const programsData: Record<string, Program> = {
   "smash-101": {
     title: "Smash 101",
     level: "Beginner",
@@ -39,7 +60,7 @@ export const programsData = {
     batches: 6,
     description:
       "Building on the fundamentals, Smash 102 introduces intermediate techniques and strategies. You'll master advanced footwork patterns, learn powerful smash techniques, improve your net play, and develop tactical awareness. This program focuses on consistency, accuracy, and building the stamina needed for competitive play. Perfect for players who have completed Smash 101 or have basic badminton experience.",
-    heroImage: "/image/images/smash101.png",
+    heroImage: "/image/images/smash101.png", // <- Fix the image path here
     discussions: [
       {
         id: 1,
@@ -109,4 +130,4 @@ export const programsData = {
       },
     ],
   },
-}
+};
