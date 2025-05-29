@@ -1,4 +1,19 @@
-export const batchesData = {
+interface Batch {
+  id: number;
+  title: string;
+  level: "Beginner" | "Intermediate" | "Advanced";
+  dateRange: string;
+  location: string;
+  sessions: number;
+  capacity: string; // e.g., "16/20"
+  description: string;
+}
+
+type BatchKey = "smash-101" | "smash-102" | "smash-103";
+
+type BatchesData = Record<BatchKey, Batch[]>;
+
+export const batchesData: BatchesData = {
   "smash-101": [
     {
       id: 1,
@@ -19,7 +34,8 @@ export const batchesData = {
       location: "Logan Central QLD, Australia",
       sessions: 8,
       capacity: "12/20",
-      description: "Beginner level training with professional coaches. Focus on basic techniques and fun activities.",
+      description:
+        "Beginner level training with professional coaches. Focus on basic techniques and fun activities.",
     },
     {
       id: 3,
@@ -29,7 +45,8 @@ export const batchesData = {
       location: "Logan Central QLD, Australia",
       sessions: 8,
       capacity: "18/20",
-      description: "Adult beginner classes focusing on fundamentals and fitness.",
+      description:
+        "Adult beginner classes focusing on fundamentals and fitness.",
     },
     {
       id: 4,
@@ -39,7 +56,8 @@ export const batchesData = {
       location: "Logan Central QLD, Australia",
       sessions: 8,
       capacity: "14/20",
-      description: "Teen-focused beginner training with age-appropriate coaching methods.",
+      description:
+        "Teen-focused beginner training with age-appropriate coaching methods.",
     },
   ],
   "smash-102": [
@@ -51,7 +69,8 @@ export const batchesData = {
       location: "Logan Central QLD, Australia",
       sessions: 10,
       capacity: "15/18",
-      description: "Intermediate level training focusing on advanced techniques and competitive strategies.",
+      description:
+        "Intermediate level training focusing on advanced techniques and competitive strategies.",
     },
     {
       id: 2,
@@ -61,7 +80,8 @@ export const batchesData = {
       location: "Logan Central QLD, Australia",
       sessions: 10,
       capacity: "12/18",
-      description: "Advanced footwork and smash techniques for intermediate players.",
+      description:
+        "Advanced footwork and smash techniques for intermediate players.",
     },
     {
       id: 3,
@@ -71,7 +91,8 @@ export const batchesData = {
       location: "Logan Central QLD, Australia",
       sessions: 10,
       capacity: "16/18",
-      description: "Perfect for working professionals who want to improve their game on weekends.",
+      description:
+        "Perfect for working professionals who want to improve their game on weekends.",
     },
     {
       id: 4,
@@ -81,7 +102,8 @@ export const batchesData = {
       location: "Logan Central QLD, Australia",
       sessions: 10,
       capacity: "14/18",
-      description: "Specialized training focusing on doubles strategies and teamwork.",
+      description:
+        "Specialized training focusing on doubles strategies and teamwork.",
     },
     {
       id: 5,
@@ -91,7 +113,8 @@ export const batchesData = {
       location: "Logan Central QLD, Australia",
       sessions: 10,
       capacity: "10/18",
-      description: "Late evening sessions for busy professionals and students.",
+      description:
+        "Late evening sessions for busy professionals and students.",
     },
     {
       id: 6,
@@ -101,7 +124,8 @@ export const batchesData = {
       location: "Logan Central QLD, Australia",
       sessions: 10,
       capacity: "13/18",
-      description: "Youth-focused intermediate training preparing for competitive play.",
+      description:
+        "Youth-focused intermediate training preparing for competitive play.",
     },
   ],
   "smash-103": [
@@ -113,7 +137,8 @@ export const batchesData = {
       location: "Logan Central QLD, Australia",
       sessions: 12,
       capacity: "8/12",
-      description: "Elite training program for advanced players aiming for competitive excellence.",
+      description:
+        "Elite training program for advanced players aiming for competitive excellence.",
     },
     {
       id: 2,
@@ -123,7 +148,8 @@ export const batchesData = {
       location: "Logan Central QLD, Australia",
       sessions: 12,
       capacity: "10/12",
-      description: "Intensive tournament preparation with video analysis and mental conditioning.",
+      description:
+        "Intensive tournament preparation with video analysis and mental conditioning.",
     },
     {
       id: 3,
@@ -133,7 +159,8 @@ export const batchesData = {
       location: "Logan Central QLD, Australia",
       sessions: 12,
       capacity: "6/12",
-      description: "Professional development program for aspiring competitive players.",
+      description:
+        "Professional development program for aspiring competitive players.",
     },
     {
       id: 4,
@@ -143,7 +170,8 @@ export const batchesData = {
       location: "Logan Central QLD, Australia",
       sessions: 12,
       capacity: "9/12",
-      description: "Master-level training with personalized coaching and advanced tactics.",
+      description:
+        "Master-level training with personalized coaching and advanced tactics.",
     },
     {
       id: 5,
@@ -153,7 +181,8 @@ export const batchesData = {
       location: "Logan Central QLD, Australia",
       sessions: 12,
       capacity: "7/12",
-      description: "Specialized singles training focusing on individual excellence and strategy.",
+      description:
+        "Specialized singles training focusing on individual excellence and strategy.",
     },
     {
       id: 6,
@@ -163,7 +192,8 @@ export const batchesData = {
       location: "Logan Central QLD, Australia",
       sessions: 12,
       capacity: "11/12",
-      description: "Elite doubles training for advanced partnership strategies.",
+      description:
+        "Elite doubles training for advanced partnership strategies.",
     },
     {
       id: 7,
@@ -173,7 +203,8 @@ export const batchesData = {
       location: "Logan Central QLD, Australia",
       sessions: 12,
       capacity: "5/12",
-      description: "Final preparation for competitive tournaments and professional play.",
+      description:
+        "Final preparation for competitive tournaments and professional play.",
     },
     {
       id: 8,
@@ -183,7 +214,8 @@ export const batchesData = {
       location: "Logan Central QLD, Australia",
       sessions: 12,
       capacity: "8/12",
-      description: "Advanced mental conditioning and psychological preparation for competition.",
+      description:
+        "Advanced mental conditioning and psychological preparation for competition.",
     },
   ],
-}
+};

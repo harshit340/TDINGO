@@ -79,8 +79,13 @@ function BatchesTab({ programId }: { programId: string }) {
     </div>
   )
 }
+interface PageProps {
+  params: {
+    id: string;
+  };
+}
 
-export default function ProgramDetailPage({ params }: { params: { id: string } }) {
+export default function Page({ params }: PageProps) {
   const [activeTab, setActiveTab] = useState("Overview")
   const programData = programsData[params.id as keyof typeof programsData]
 
