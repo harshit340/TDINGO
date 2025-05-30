@@ -5,7 +5,7 @@ interface Batch {
   dateRange: string;
   location: string;
   sessions: number;
-  capacity: string; // e.g., "16/20"
+  capacity: string; 
   description: string;
 }
 

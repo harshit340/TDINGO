@@ -132,13 +132,13 @@ export default function Page() {
         </div>
       </div>
 
-      <div className="md:hidden fixed bottom-13 left-6 right-6 z-50">
-        {/* Blur backdrop */}
+      <div className="md:hidden fixed bottom-17 left-6 right-6 z-50">
+        
         <div className="absolute inset-0 bg-white/30 backdrop-blur-lg border border-white/20 shadow-xl rounded-xl"
 
         > </div>
 
-        {/* Buttons container */}
+        
         <div className="relative p-4 flex gap-3 justify-center">
           <Button
             variant="outline"

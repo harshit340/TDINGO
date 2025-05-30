@@ -1,4 +1,3 @@
-// Define an interface for a program
 interface Program {
   title: string;
   level: string;
@@ -8,7 +7,6 @@ interface Program {
   discussions: Discussion[];
 }
 
-// Define an interface for a discussion within a program
 interface Discussion {
   id: number;
   user: string;
@@ -18,7 +16,6 @@ interface Discussion {
   avatar: string;
 }
 
-// Define the programsData object using the defined interfaces
 export const programsData: Record<string, Program> = {
   "smash-101": {
     title: "Smash 101",

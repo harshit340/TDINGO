@@ -68,13 +68,11 @@ function BatchesTab({ programId }: { programId: string }) {
         </div>
       ))}
 
-      <div className="lg:hidden fixed bottom-13 left-6 right-6 z-50">
-        {/* Blur backdrop */}
+      <div className="lg:hidden fixed bottom-17 left-6 right-6 z-50">
         <div className="absolute inset-0 bg-white/30 backdrop-blur-lg border border-white/20  "
 
         ></div>
 
-        {/* Buttons container */}
         <div className="relative w-full p-2 flex gap-3 justify-center ">
           <Button className="w-[125px] h-[38px] rounded-[28px] bg-[#00B2D9] text-white"><FaPlus />Add Batch</Button>
           
@@ -215,7 +213,7 @@ export default function Page({ params }: any) {
 
   
                 {activeTab === "Overview" && (
-                 <div className="flex gap-2 lg:hidden">
+                 <div className="flex gap-2 md:hidden">
                   <FiEdit2 className="text-[20px]" />
                   <RiDeleteBinFill className="ml-3 text-[20px]" />
                 </div>
@@ -243,7 +241,7 @@ export default function Page({ params }: any) {
             </div>
 
             {activeTab === "Overview" && (
-              <div className="max-lg:hidden">
+              <div className="max-md:hidden">
               <Button className="w-[79px] h-[36px] rounded-[34px] border">Edit</Button>
               <Button className="w-[104px] h-[36px] rounded-[34px] border ml-2">Remove</Button>
               </div>
