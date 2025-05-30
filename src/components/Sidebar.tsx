@@ -1,5 +1,9 @@
 import React from 'react'
 import { FaRegBell } from "react-icons/fa6";
+import { GiShuttlecock } from 'react-icons/gi';
+import { IoSettingsSharp } from 'react-icons/io5';
+import { RxAvatar } from 'react-icons/rx';
+import { TbReportSearch } from 'react-icons/tb';
 export default function Sidebar() {
   return (
     <div>
@@ -34,20 +38,21 @@ export default function Sidebar() {
           </div>
           <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 px-4 py-2 md:hidden z-50">
         <div className="flex justify-around">
-          <div className="flex flex-col items-center py-2">
-            <span className="text-xs text-gray-900 mt-1">Programs</span>
+          <div className="flex flex-col items-center py-2 ">
+            <GiShuttlecock />
+            <span className="text-xs text-gray-900 mt-1 font-bold">Programs</span>
           </div>
           <div className="flex flex-col items-center py-2">
-            
-            <span className="text-xs text-gray-400 mt-1">Reports</span>
+            <TbReportSearch />
+            <span className="text-xs text-gray-400 mt-1 font-semibold">Reports</span>
           </div>
           <div className="flex flex-col items-center py-2">
-            
-            <span className="text-xs text-gray-400 mt-1">Settings</span>
+            <IoSettingsSharp />
+            <span className="text-xs text-gray-400 mt-1 font-semibold">Settings</span>
           </div>
           <div className="flex flex-col items-center py-2">
-            
-            <span className="text-xs text-gray-400 mt-1">Profile</span>
+            <RxAvatar />
+            <span className="text-xs text-gray-400 mt-1 font-semibold">Profile</span>
           </div>
         </div>
       </div>

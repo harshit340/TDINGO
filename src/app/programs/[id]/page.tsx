@@ -16,6 +16,9 @@ import { useState } from "react"
 import { FiEdit2 } from "react-icons/fi"
 import { RiDeleteBinFill } from "react-icons/ri"
 import { FaPlus } from "react-icons/fa6"
+import { SlCalender } from "react-icons/sl"
+import { IoLocationOutline } from "react-icons/io5"
+import { GiShuttlecock } from "react-icons/gi"
 
 const tabs = ["Overview", "Batches", "Players", "Prices"]
 
@@ -27,7 +30,7 @@ function BatchesTab({ programId }: { programId: string }) {
       {batches.map((batch) => (
         <div
           key={batch.id}
-          className="bg-white rounded-lg border border-gray-200 p-4 w-[full] max-w-sm mx-auto h-[377px]"
+          className="bg-white rounded-lg border border-gray-200 p-4 w-[full] max-w-sm mx-auto h-[377px] flex flex-col justify-around"
         >
           <div className="mb-3">
             <div className="flex items-center justify-between mb-3">
@@ -49,16 +52,16 @@ function BatchesTab({ programId }: { programId: string }) {
           </div>
 
           <div className="space-y-4 text-sm text-gray-600 mb-4">
-            <div>{batch.dateRange}</div>
-            <div>{batch.location}</div>
-            <div>{batch.sessions} Sessions</div>
+            <div className="flex items-center justify-start "><SlCalender className="mr-1 "/>{batch.dateRange}</div>
+            <div className="flex items-center justify-start "><IoLocationOutline className="mr-1"/>{batch.location}</div>
+            <div className="flex items-center justify-start "><GiShuttlecock className="mr-1"/>{batch.sessions} Sessions</div>
           </div>
 
           <p className="text-sm text-gray-600 mb-4 line-clamp-3">{batch.description}</p>
 
           <div className="flex gap-2">
-            <Button className="flex-1 bg-orange-500 hover:bg-orange-600">View Details</Button>
-            <Button variant="outline" className="flex-1">
+            <Button className="flex-1 bg-orange-500 hover:bg-orange-600 text-white rounded-[20px]">View Details</Button>
+            <Button variant="outline" className="flex-1 rounded-[20px]">
               Pricelist
             </Button>
           </div>
@@ -80,11 +83,6 @@ function BatchesTab({ programId }: { programId: string }) {
     </div>
   )
 }
-/* interface PageProps {
-  params: {
-    id: string;
-  };
-} */
 
 export default function Page({ params }: any) {
   const [activeTab, setActiveTab] = useState("Overview")
@@ -112,7 +110,7 @@ export default function Page({ params }: any) {
         )
       default:
         return (
-          <div className="bg-white border border-gray-200 rounded-lg">
+          <div className="bg-white border border-gray-200 rounded-lg mb-8">
             {/* Hero Image */}
             <div className="relative w-full h-[294px] rounded-[16px] overflow-hidden">
               <Image
@@ -198,7 +196,7 @@ export default function Page({ params }: any) {
       <Sidebar />
       <div className="p-4 sm:p-4 flex-1 w-full">
         {/* Breadcrumb */}
-        <div className="mb-6 pt-6">
+        <div className="mb-6 md:pt-6">
           <div className="flex items-center text-sm text-gray-500 mb-4">
             <Link href="/" className="hover:text-gray-700 text-base">
               Programs
@@ -231,7 +229,7 @@ export default function Page({ params }: any) {
                   <button
                     key={tab}
                     onClick={() => setActiveTab(tab)}
-                    className={`px-4 py-2 text-sm font-medium rounded-lg transition-colors ${activeTab === tab
+                    className={` text-sm font-medium rounded-full w-[72px] h-[31px] border transition-colors ${activeTab === tab
                       ? "bg-gray-800 text-white"
                       : "text-gray-600 hover:bg-gray-100"
                       }`}
